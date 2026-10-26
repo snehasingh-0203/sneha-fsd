@@ -19,9 +19,11 @@ const App = () => {
         <h1>Quiz App</h1>
         <h2>Quiz Completed!</h2>
 
-        <p>
-          Your score: {score} / {questions.length}
-        </p>
+        <h3>
+          Your Score: {score} / {questions.length}
+        </h3>
+
+        <p>You scored {Math.round((score / questions.length) * 100)}%</p>
 
         <button
           onClick={() => {
@@ -55,8 +57,6 @@ const App = () => {
           </button>
         ))}
       </div>
-
-      <p>Score: {score}</p>
     </div>
   );
 };
